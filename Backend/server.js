@@ -9,9 +9,15 @@ const routes = require("./routes/Routes");
 // Middle ware
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(cors({
-  origin: ["http://localhost:3000/","https://task-manager.onrender.com"]
-}));
+app.use(
+  cors({
+    origin: [
+      "http://localhost:3000/",
+      "https://task-manager-b1p7.onrender.com",
+    ],
+  })
+);
+// app.use(cors());
 app.use(routes);
 
 const startserver = async () => {
